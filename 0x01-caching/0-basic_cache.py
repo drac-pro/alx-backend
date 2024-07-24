@@ -9,7 +9,7 @@ class BasicCache(BaseCaching):
         """initializes a BasicCache object
         """
         super().__init__()
-    
+
     def put(self, key, item):
         """assign a key value pair to the dictionary cache_data"""
         if key and item:
