@@ -12,11 +12,11 @@ class FIFOCache(BaseCaching):
     def put(self, key, item):
         """assign a key value pair to the dictionary cache_data"""
         if key and item:
+            self.cache_data[key] = item
             if len(self.cache_data) > super().MAX_ITEMS:
                 discarded = next(iter(self.cache_data))
                 self.cache_data.pop(discarded)
                 print(f'DISCARD: {discarded}')
-            self.cache_data[key] = item
 
     def get(self, key):
         """returns a value in the cached_data with specified key"""
