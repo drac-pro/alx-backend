@@ -34,6 +34,7 @@ def get_user():
 
 @app.before_request
 def before_request():
+    """executes before all other functions"""
     g.user = get_user()
 
 
