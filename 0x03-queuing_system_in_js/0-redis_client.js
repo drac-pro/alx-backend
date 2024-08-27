@@ -9,5 +9,3 @@ client
   .on('error', (err) =>
     console.log(`Redis client not connected to the server: ${err.message}`)
   );
-
-client.connect()
